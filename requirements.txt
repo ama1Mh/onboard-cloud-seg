@@ -1,0 +1,7 @@
+torch
+segmentation-models-pytorch
+numpy
+onnx
+onnxruntime
+wandb
+matplotlib
