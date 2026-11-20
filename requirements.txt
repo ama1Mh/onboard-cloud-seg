@@ -1,7 +1,10 @@
+numpy
+pandas
 torch
 segmentation-models-pytorch
-numpy
 onnx
 onnxruntime
 wandb
 matplotlib
+huggingface_hub
+pytest
