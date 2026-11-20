@@ -49,3 +49,15 @@ def test_evaluate_uses_label_values():
     assert s_cloud["BOA_median"] == 1.0              # cloud vs not-cloud is perfect
     _, s_shadow = evaluate([pred], [gt], [v], (3,), (3,))
     assert s_shadow["PA_low"] == 100.0               # shadow completely missed
+
+
+def test_harmonize_maps_native_codes():
+    from src.harmonize import harmonize
+    fm = np.array([0, 1, 2, 3, 4], np.uint8)            # land, water, shadow, snow, cloud
+    assert harmonize("fmask", fm).tolist() == [0, 0, 3, 0, 1]
+    km = np.array([0, 1, 2, 3, 4, 5], np.uint8)
+    assert harmonize("kappamask_L1C", km).tolist() == [255, 0, 3, 2, 1, 255]
+    sc = np.array([0, 3, 4, 8, 9, 10, 11], np.uint8)
+    assert harmonize("sen2cor", sc).tolist() == [255, 3, 0, 1, 1, 2, 0]
+    pr = np.array([0, 39, 40, 100], np.uint8)
+    assert harmonize("s2cloudless", pr).tolist() == [0, 0, 1, 1]
