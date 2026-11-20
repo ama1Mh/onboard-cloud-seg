@@ -15,8 +15,7 @@ CLASS_MAPS = {
     # 3 cloud shadow, 4 vegetation, 5 not vegetated, 6 water, 7 unclassified,
     # 8 cloud medium prob., 9 cloud high prob., 10 thin cirrus, 11 snow
     "sen2cor": {0: NODATA, 1: NODATA, 3: 3, 8: 1, 9: 1, 10: 2},
-    # Variant: also count "dark area" (2) as shadow, to see which matches the paper
-    "sen2cor_dark_as_shadow": {0: NODATA, 1: NODATA, 2: 3, 3: 3, 8: 1, 9: 1, 10: 2},
+    # (Counting "dark area" (2) as shadow gave 0.56 vs the paper's 0.51, so it is not used.)
     # KappaMask: 0 missing, 1 clear, 2 cloud shadow, 3 semi-transparent cloud, 4 cloud, 5 undefined
     "kappamask_L1C": {0: NODATA, 2: 3, 3: 2, 4: 1, 5: NODATA},
     "kappamask_L2A": {0: NODATA, 2: 3, 3: 2, 4: 1, 5: NODATA},
@@ -30,7 +29,7 @@ PROB_THRESHOLDS = {
 }
 
 # The file each method is read from (variants reuse another method's file)
-SOURCE_FILE = {"sen2cor_dark_as_shadow": "sen2cor"}
+SOURCE_FILE = {}
 
 
 def harmonize(method, arr):

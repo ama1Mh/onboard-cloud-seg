@@ -25,7 +25,6 @@ from src.metrics import EXPERIMENTS, evaluate                    # noqa: E402
 METHODS = {
     "fmask":                  ["a_cloud", "b_shadow", "c_invalid"],
     "sen2cor":                ["a_cloud", "b_shadow", "c_invalid"],
-    "sen2cor_dark_as_shadow": ["b_shadow", "c_invalid"],
     "kappamask_L1C":          ["a_cloud", "b_shadow", "c_invalid"],
     "kappamask_L2A":          ["a_cloud", "b_shadow", "c_invalid"],
     "s2cloudless":            ["a_cloud"],
@@ -38,7 +37,6 @@ METHODS = {
 PAPER_BOA = {
     ("fmask", "a_cloud"): 0.84, ("fmask", "b_shadow"): 0.72, ("fmask", "c_invalid"): 0.81,
     ("sen2cor", "a_cloud"): 0.71, ("sen2cor", "b_shadow"): 0.51, ("sen2cor", "c_invalid"): 0.67,
-    ("sen2cor_dark_as_shadow", "b_shadow"): 0.51, ("sen2cor_dark_as_shadow", "c_invalid"): 0.67,
     ("kappamask_L1C", "a_cloud"): 0.82, ("kappamask_L1C", "b_shadow"): 0.74,
     ("kappamask_L1C", "c_invalid"): 0.81,
     ("kappamask_L2A", "a_cloud"): 0.77, ("kappamask_L2A", "b_shadow"): 0.64,
@@ -98,11 +96,11 @@ def main():
                            paper_BOA=PAPER_BOA.get((method, exp), np.nan))
             rows.append(summary)
             print(f"{method:23s} {exp:10s} BOA {summary['BOA_median']:.3f} "
-                  f"(pos-only {summary['BOA_median_pos_only']:.3f})  "
+                  f"(all {summary['BOA_median_all']:.3f})  "
                   f"paper {summary['paper_BOA']:.2f}  "
                   f"PA high {summary['PA_high']:5.1f}%  UA high {summary['UA_high']:5.1f}%")
 
-    cols = ["method", "experiment", "BOA_median", "BOA_median_pos_only", "paper_BOA",
+    cols = ["method", "experiment", "BOA_median", "BOA_median_all", "paper_BOA",
             "PA_low", "PA_middle", "PA_high", "UA_low", "UA_middle", "UA_high",
             "IoU", "n_patches", "n_patches_with_positive"]
     out = pd.DataFrame(rows)[cols].round(4)

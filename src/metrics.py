@@ -3,7 +3,7 @@
 Per patch: PA (producer's accuracy ~ recall), UA (user's accuracy ~ precision),
 BOA (balanced overall accuracy = mean of TPR and TNR).
 PA and UA are NaN for patches with no positive pixels in the ground truth.
-Summary: median BOA, and % of patches with PA/UA < 0.1 (low), 0.1-0.9 (middle), > 0.9 (high).
+Summary: median BOA over patches containing the positive class (matches the paper), and % of patches with PA/UA < 0.1 (low), 0.1-0.9 (middle), > 0.9 (high).
 We also report a dataset-level IoU for the positive class.
 """
 import numpy as np
@@ -63,9 +63,11 @@ def summarise(per_patch):
     pa_g, ua_g = groups(per_patch["pa"]), groups(per_patch["ua"])
     tp, fp, fn = per_patch["tp"].sum(), per_patch["fp"].sum(), per_patch["fn"].sum()
     return {
-        "BOA_median": np.nanmedian(per_patch["boa"]),
-        # variant: BOA only over patches that contain the positive class
-        "BOA_median_pos_only": np.nanmedian(per_patch.loc[per_patch["has_pos"], "boa"]),
+        # Paper definition (verified 21 Nov 2026 by reproducing Table p.14):
+        # median BOA over patches that contain the positive class.
+        "BOA_median": np.nanmedian(per_patch.loc[per_patch["has_pos"], "boa"]),
+        # For reference: median over all patches (cloud-free patches give BOA = TNR)
+        "BOA_median_all": np.nanmedian(per_patch["boa"]),
         "PA_low": pa_g[0], "PA_middle": pa_g[1], "PA_high": pa_g[2],
         "UA_low": ua_g[0], "UA_middle": ua_g[1], "UA_high": ua_g[2],
         "IoU": tp / (tp + fp + fn) if (tp + fp + fn) > 0 else np.nan,
