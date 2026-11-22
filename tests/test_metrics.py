@@ -61,3 +61,15 @@ def test_harmonize_maps_native_codes():
     assert harmonize("sen2cor", sc).tolist() == [255, 3, 0, 1, 1, 2, 0]
     pr = np.array([0, 39, 40, 100], np.uint8)
     assert harmonize("s2cloudless", pr).tolist() == [0, 0, 1, 1]
+
+
+def test_multiclass_scores():
+    from src.metrics import multiclass_confusion, multiclass_scores
+    gt = np.array([[0, 1], [2, 3]], np.uint8)
+    pred = np.array([[0, 1], [1, 0]], np.uint8)       # thin -> thick, shadow -> clear
+    cm = multiclass_confusion(pred, gt, np.ones((2, 2), bool))
+    assert cm.sum() == 4 and cm[2, 1] == 1 and cm[3, 0] == 1
+    s = multiclass_scores(cm)
+    assert s["IoU_thin"] == 0 and s["IoU_shadow"] == 0
+    assert s["IoU_clear"] == 0.5 and s["IoU_thick"] == 0.5
+    assert s["mIoU"] == 0.25

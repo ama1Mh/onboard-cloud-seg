@@ -92,3 +92,32 @@ def evaluate(pred_labels, gt_labels, valids, positive_pred, positive_gt):
                          pa=pa, ua=ua, boa=boa, has_pos=(tp + fn) > 0))
     df = pd.DataFrame(rows)
     return df, summarise(df)
+
+
+# ---------- 4-class scores (clear, thick, thin, shadow) ----------
+
+def multiclass_confusion(pred, gt, valid, n_classes=4):
+    """n x n confusion matrix over valid pixels. Rows = true class, columns = predicted."""
+    p = pred[valid].astype(np.int64)
+    g = gt[valid].astype(np.int64)
+    keep = (p < n_classes) & (g < n_classes)
+    idx = g[keep] * n_classes + p[keep]
+    return np.bincount(idx, minlength=n_classes * n_classes).reshape(n_classes, n_classes)
+
+
+def multiclass_scores(cm, class_names=("clear", "thick", "thin", "shadow")):
+    """Per-class IoU and F1, plus mean IoU and macro F1, from a summed confusion matrix."""
+    cm = np.asarray(cm, dtype=float)
+    tp = np.diag(cm)
+    fp = cm.sum(axis=0) - tp
+    fn = cm.sum(axis=1) - tp
+    with np.errstate(divide="ignore", invalid="ignore"):
+        iou = np.where(tp + fp + fn > 0, tp / (tp + fp + fn), np.nan)
+        f1 = np.where(2 * tp + fp + fn > 0, 2 * tp / (2 * tp + fp + fn), np.nan)
+    out = {}
+    for name, i, f in zip(class_names, iou, f1):
+        out[f"IoU_{name}"] = i
+        out[f"F1_{name}"] = f
+    out["mIoU"] = float(np.nanmean(iou))
+    out["macroF1"] = float(np.nanmean(f1))
+    return out
