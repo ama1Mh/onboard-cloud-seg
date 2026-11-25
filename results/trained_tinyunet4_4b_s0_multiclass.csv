@@ -1,0 +1,2 @@
+IoU_clear,F1_clear,IoU_thick,F1_thick,IoU_thin,F1_thin,IoU_shadow,F1_shadow,mIoU,macroF1,model,n_bands
+0.8353,0.9102,0.8022,0.8902,0.3873,0.5584,0.4331,0.6045,0.6145,0.7408,tinyunet4_4b_s0,4

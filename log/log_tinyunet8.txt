@@ -1,0 +1,151 @@
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from WANDB_API_KEY.
+wandb: Currently logged in as: ama1mh (amalmh) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.28.1
+wandb: Run data is saved locally in /kaggle/working/onboard-cloud-seg/wandb/run-20261123_195948-l2jmqdj2
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run tinyunet8_4b_s0
+wandb: ⭐️ View project at https://wandb.ai/amalmh/onboard-cloud-seg
+wandb: 🚀 View run at https://wandb.ai/amalmh/onboard-cloud-seg/runs/l2jmqdj2
+run tinyunet8_4b_s0 on cuda
+parameters: 486,652
+epoch   1  train 1.0095  val 0.8423  val mIoU 0.305 (thin 0.001, shadow 0.000)  lr 1e-03  181s
+epoch   2  train 0.7210  val 0.7190  val mIoU 0.419 (thin 0.056, shadow 0.273)  lr 1e-03  149s
+epoch   3  train 0.6294  val 0.6457  val mIoU 0.450 (thin 0.159, shadow 0.199)  lr 1e-03  150s
+epoch   4  train 0.5915  val 0.6378  val mIoU 0.450 (thin 0.112, shadow 0.265)  lr 1e-03  150s
+epoch   5  train 0.5692  val 0.6053  val mIoU 0.476 (thin 0.150, shadow 0.278)  lr 1e-03  147s
+epoch   6  train 0.5421  val 0.5483  val mIoU 0.543 (thin 0.289, shadow 0.348)  lr 1e-03  151s
+epoch   7  train 0.5320  val 0.5304  val mIoU 0.537 (thin 0.260, shadow 0.339)  lr 1e-03  148s
+epoch   8  train 0.5218  val 0.5120  val mIoU 0.545 (thin 0.339, shadow 0.279)  lr 1e-03  148s
+epoch   9  train 0.5033  val 0.5113  val mIoU 0.548 (thin 0.311, shadow 0.332)  lr 1e-03  149s
+epoch  10  train 0.4862  val 0.4872  val mIoU 0.566 (thin 0.326, shadow 0.356)  lr 1e-03  146s
+epoch  11  train 0.4767  val 0.4494  val mIoU 0.583 (thin 0.360, shadow 0.378)  lr 1e-03  147s
+epoch  12  train 0.4635  val 0.4709  val mIoU 0.587 (thin 0.389, shadow 0.381)  lr 1e-03  150s
+epoch  13  train 0.4596  val 0.4425  val mIoU 0.590 (thin 0.396, shadow 0.357)  lr 1e-03  153s
+epoch  14  train 0.4463  val 0.5028  val mIoU 0.569 (thin 0.378, shadow 0.394)  lr 1e-03  153s
+epoch  15  train 0.4426  val 0.4529  val mIoU 0.592 (thin 0.398, shadow 0.393)  lr 1e-03  150s
+epoch  16  train 0.4330  val 0.4355  val mIoU 0.613 (thin 0.411, shadow 0.435)  lr 1e-03  153s
+epoch  17  train 0.4229  val 0.4168  val mIoU 0.613 (thin 0.408, shadow 0.422)  lr 1e-03  151s
+epoch  18  train 0.4180  val 0.4482  val mIoU 0.619 (thin 0.447, shadow 0.423)  lr 1e-03  153s
+epoch  19  train 0.4204  val 0.4294  val mIoU 0.611 (thin 0.393, shadow 0.449)  lr 1e-03  150s
+epoch  20  train 0.4135  val 0.4179  val mIoU 0.616 (thin 0.402, shadow 0.449)  lr 1e-03  150s
+epoch  21  train 0.4051  val 0.4244  val mIoU 0.610 (thin 0.409, shadow 0.424)  lr 1e-03  152s
+epoch  22  train 0.3991  val 0.4966  val mIoU 0.602 (thin 0.384, shadow 0.459)  lr 1e-04  151s
+epoch  23  train 0.3762  val 0.3809  val mIoU 0.644 (thin 0.447, shadow 0.480)  lr 1e-04  153s
+epoch  24  train 0.3703  val 0.3776  val mIoU 0.649 (thin 0.463, shadow 0.481)  lr 1e-04  151s
+epoch  25  train 0.3689  val 0.3768  val mIoU 0.652 (thin 0.470, shadow 0.481)  lr 1e-04  151s
+epoch  26  train 0.3666  val 0.3752  val mIoU 0.650 (thin 0.463, shadow 0.482)  lr 1e-04  150s
+epoch  27  train 0.3649  val 0.3780  val mIoU 0.645 (thin 0.443, shadow 0.486)  lr 1e-04  151s
+epoch  28  train 0.3632  val 0.3756  val mIoU 0.647 (thin 0.456, shadow 0.478)  lr 1e-04  153s
+epoch  29  train 0.3624  val 0.3737  val mIoU 0.649 (thin 0.454, shadow 0.486)  lr 1e-04  150s
+epoch  30  train 0.3627  val 0.3716  val mIoU 0.651 (thin 0.460, shadow 0.488)  lr 1e-04  148s
+epoch  31  train 0.3619  val 0.3722  val mIoU 0.651 (thin 0.457, shadow 0.492)  lr 1e-04  151s
+epoch  32  train 0.3614  val 0.3751  val mIoU 0.651 (thin 0.461, shadow 0.489)  lr 1e-04  148s
+epoch  33  train 0.3605  val 0.3686  val mIoU 0.655 (thin 0.477, shadow 0.485)  lr 1e-04  149s
+epoch  34  train 0.3616  val 0.3709  val mIoU 0.651 (thin 0.462, shadow 0.487)  lr 1e-04  150s
+epoch  35  train 0.3602  val 0.3756  val mIoU 0.650 (thin 0.461, shadow 0.483)  lr 1e-04  150s
+epoch  36  train 0.3572  val 0.3680  val mIoU 0.656 (thin 0.467, shadow 0.496)  lr 1e-04  148s
+epoch  37  train 0.3598  val 0.3722  val mIoU 0.652 (thin 0.458, shadow 0.495)  lr 1e-04  149s
+epoch  38  train 0.3575  val 0.3674  val mIoU 0.657 (thin 0.469, shadow 0.500)  lr 1e-04  149s
+epoch  39  train 0.3559  val 0.3686  val mIoU 0.656 (thin 0.467, shadow 0.498)  lr 1e-04  150s
+epoch  40  train 0.3571  val 0.3691  val mIoU 0.658 (thin 0.476, shadow 0.494)  lr 1e-04  150s
+epoch  41  train 0.3576  val 0.3722  val mIoU 0.654 (thin 0.461, shadow 0.498)  lr 1e-04  148s
+epoch  42  train 0.3548  val 0.3646  val mIoU 0.657 (thin 0.468, shadow 0.495)  lr 1e-04  147s
+epoch  43  train 0.3533  val 0.3677  val mIoU 0.655 (thin 0.458, shadow 0.504)  lr 1e-04  149s
+epoch  44  train 0.3542  val 0.3638  val mIoU 0.660 (thin 0.482, shadow 0.496)  lr 1e-04  147s
+epoch  45  train 0.3547  val 0.3639  val mIoU 0.655 (thin 0.455, shadow 0.505)  lr 1e-04  150s
+epoch  46  train 0.3523  val 0.3687  val mIoU 0.652 (thin 0.462, shadow 0.491)  lr 1e-04  149s
+epoch  47  train 0.3542  val 0.3616  val mIoU 0.658 (thin 0.467, shadow 0.501)  lr 1e-04  150s
+epoch  48  train 0.3523  val 0.3608  val mIoU 0.658 (thin 0.466, shadow 0.502)  lr 1e-04  149s
+epoch  49  train 0.3516  val 0.3637  val mIoU 0.657 (thin 0.468, shadow 0.494)  lr 1e-04  151s
+epoch  50  train 0.3511  val 0.3629  val mIoU 0.658 (thin 0.467, shadow 0.500)  lr 1e-04  150s
+epoch  51  train 0.3525  val 0.3636  val mIoU 0.658 (thin 0.469, shadow 0.501)  lr 1e-04  149s
+epoch  52  train 0.3498  val 0.3624  val mIoU 0.661 (thin 0.474, shadow 0.503)  lr 1e-04  149s
+epoch  53  train 0.3515  val 0.3565  val mIoU 0.663 (thin 0.477, shadow 0.506)  lr 1e-04  149s
+epoch  54  train 0.3494  val 0.3596  val mIoU 0.662 (thin 0.481, shadow 0.502)  lr 1e-04  149s
+epoch  55  train 0.3493  val 0.3624  val mIoU 0.660 (thin 0.470, shadow 0.506)  lr 1e-04  150s
+epoch  56  train 0.3487  val 0.3623  val mIoU 0.663 (thin 0.478, shadow 0.508)  lr 1e-04  149s
+epoch  57  train 0.3484  val 0.3570  val mIoU 0.666 (thin 0.488, shadow 0.506)  lr 1e-04  149s
+epoch  58  train 0.3469  val 0.3582  val mIoU 0.661 (thin 0.478, shadow 0.502)  lr 1e-05  149s
+epoch  59  train 0.3441  val 0.3582  val mIoU 0.662 (thin 0.478, shadow 0.503)  lr 1e-05  150s
+epoch  60  train 0.3435  val 0.3567  val mIoU 0.663 (thin 0.475, shadow 0.510)  lr 1e-05  151s
+epoch  61  train 0.3424  val 0.3592  val mIoU 0.664 (thin 0.482, shadow 0.509)  lr 1e-05  149s
+epoch  62  train 0.3427  val 0.3562  val mIoU 0.664 (thin 0.480, shadow 0.508)  lr 1e-05  150s
+epoch  63  train 0.3425  val 0.3570  val mIoU 0.665 (thin 0.482, shadow 0.509)  lr 1e-05  150s
+epoch  64  train 0.3433  val 0.3579  val mIoU 0.665 (thin 0.480, shadow 0.509)  lr 1e-05  151s
+epoch  65  train 0.3435  val 0.3574  val mIoU 0.664 (thin 0.477, shadow 0.509)  lr 1e-05  150s
+epoch  66  train 0.3438  val 0.3583  val mIoU 0.666 (thin 0.483, shadow 0.511)  lr 1e-05  147s
+epoch  67  train 0.3439  val 0.3559  val mIoU 0.665 (thin 0.480, shadow 0.510)  lr 1e-05  149s
+epoch  68  train 0.3427  val 0.3562  val mIoU 0.665 (thin 0.482, shadow 0.510)  lr 1e-05  147s
+epoch  69  train 0.3432  val 0.3567  val mIoU 0.666 (thin 0.485, shadow 0.509)  lr 1e-05  151s
+epoch  70  train 0.3411  val 0.3585  val mIoU 0.665 (thin 0.480, shadow 0.510)  lr 1e-05  150s
+epoch  71  train 0.3407  val 0.3580  val mIoU 0.665 (thin 0.477, shadow 0.513)  lr 1e-05  149s
+epoch  72  train 0.3421  val 0.3567  val mIoU 0.667 (thin 0.484, shadow 0.512)  lr 1e-06  148s
+epoch  73  train 0.3419  val 0.3562  val mIoU 0.665 (thin 0.481, shadow 0.509)  lr 1e-06  142s
+epoch  74  train 0.3438  val 0.3585  val mIoU 0.666 (thin 0.481, shadow 0.512)  lr 1e-06  125s
+epoch  75  train 0.3426  val 0.3559  val mIoU 0.665 (thin 0.479, shadow 0.509)  lr 1e-06  125s
+epoch  76  train 0.3429  val 0.3559  val mIoU 0.666 (thin 0.482, shadow 0.511)  lr 1e-06  124s
+epoch  77  train 0.3413  val 0.3566  val mIoU 0.665 (thin 0.481, shadow 0.509)  lr 1e-06  124s
+epoch  78  train 0.3428  val 0.3565  val mIoU 0.666 (thin 0.482, shadow 0.510)  lr 1e-06  124s
+epoch  79  train 0.3426  val 0.3570  val mIoU 0.666 (thin 0.484, shadow 0.509)  lr 1e-06  125s
+epoch  80  train 0.3404  val 0.3572  val mIoU 0.663 (thin 0.474, shadow 0.508)  lr 1e-07  124s
+epoch  81  train 0.3419  val 0.3569  val mIoU 0.663 (thin 0.479, shadow 0.506)  lr 1e-07  124s
+epoch  82  train 0.3410  val 0.3563  val mIoU 0.665 (thin 0.481, shadow 0.509)  lr 1e-07  125s
+epoch  83  train 0.3412  val 0.3551  val mIoU 0.667 (thin 0.484, shadow 0.512)  lr 1e-07  124s
+epoch  84  train 0.3425  val 0.3566  val mIoU 0.665 (thin 0.477, shadow 0.512)  lr 1e-07  124s
+epoch  85  train 0.3436  val 0.3572  val mIoU 0.667 (thin 0.483, shadow 0.514)  lr 1e-07  124s
+epoch  86  train 0.3412  val 0.3566  val mIoU 0.665 (thin 0.482, shadow 0.510)  lr 1e-07  125s
+epoch  87  train 0.3415  val 0.3554  val mIoU 0.667 (thin 0.484, shadow 0.513)  lr 1e-07  124swandb: updating run metadata
+wandb: uploading history steps 100-100, summary, console lines 103-107
+wandb: 
+wandb: Run history:
+wandb:           epoch ▁▁▁▁▁▂▂▂▂▂▂▃▃▃▃▃▄▄▄▄▅▅▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇███
+wandb:              lr ██████████▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:   test_F1_clear ▁
+wandb:  test_F1_shadow ▁
+wandb:   test_F1_thick ▁
+wandb:    test_F1_thin ▁
+wandb:  test_IoU_clear ▁
+wandb: test_IoU_shadow ▁
+wandb:  test_IoU_thick ▁
+wandb:   test_IoU_thin ▁
+wandb:             +15 ...
+wandb: 
+wandb: Run summary:
+wandb:           epoch 100
+wandb:              lr 0.0
+wandb:   test_F1_clear 0.9204
+wandb:  test_F1_shadow 0.68038
+wandb:   test_F1_thick 0.90076
+wandb:    test_F1_thin 0.58266
+wandb:  test_IoU_clear 0.85254
+wandb: test_IoU_shadow 0.51559
+wandb:  test_IoU_thick 0.81945
+wandb:   test_IoU_thin 0.41109
+wandb:             +16 ...
+wandb: 
+wandb: 🚀 View run tinyunet8_4b_s0 at: https://wandb.ai/amalmh/onboard-cloud-seg/runs/l2jmqdj2
+wandb: ⭐️ View project at: https://wandb.ai/amalmh/onboard-cloud-seg
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20261123_195948-l2jmqdj2/logs
+
+epoch  88  train 0.3424  val 0.3566  val mIoU 0.664 (thin 0.480, shadow 0.509)  lr 1e-08  124s
+epoch  89  train 0.3403  val 0.3562  val mIoU 0.664 (thin 0.478, shadow 0.510)  lr 1e-08  124s
+epoch  90  train 0.3420  val 0.3544  val mIoU 0.666 (thin 0.480, shadow 0.511)  lr 1e-08  124s
+epoch  91  train 0.3414  val 0.3562  val mIoU 0.665 (thin 0.479, shadow 0.511)  lr 1e-08  124s
+epoch  92  train 0.3413  val 0.3572  val mIoU 0.664 (thin 0.476, shadow 0.513)  lr 1e-08  124s
+epoch  93  train 0.3400  val 0.3556  val mIoU 0.665 (thin 0.476, shadow 0.512)  lr 1e-08  124s
+epoch  94  train 0.3427  val 0.3571  val mIoU 0.665 (thin 0.481, shadow 0.510)  lr 1e-08  125s
+epoch  95  train 0.3419  val 0.3574  val mIoU 0.664 (thin 0.470, shadow 0.514)  lr 1e-08  124s
+epoch  96  train 0.3409  val 0.3551  val mIoU 0.664 (thin 0.475, shadow 0.512)  lr 1e-08  124s
+epoch  97  train 0.3418  val 0.3565  val mIoU 0.666 (thin 0.483, shadow 0.511)  lr 1e-08  125s
+epoch  98  train 0.3411  val 0.3566  val mIoU 0.666 (thin 0.483, shadow 0.511)  lr 1e-08  125s
+epoch  99  train 0.3440  val 0.3563  val mIoU 0.665 (thin 0.479, shadow 0.510)  lr 1e-08  125s
+epoch 100  train 0.3415  val 0.3580  val mIoU 0.664 (thin 0.479, shadow 0.509)  lr 1e-08  126s
+early stop: no improvement for 10 epochs
+
+best val loss 0.3544; scoring best model on test
+  TEST a_cloud    BOA 0.899  PA high  59.2%  UA high  71.2%  IoU 0.806
+  TEST b_shadow   BOA 0.830  PA high  10.5%  UA high  35.8%  IoU 0.516
+  TEST c_invalid  BOA 0.884  PA high  57.0%  UA high  78.6%  IoU 0.832
+  TEST 4-class: mIoU 0.650 | IoU clear 0.853, thick 0.819, thin 0.411, shadow 0.516
+  params 486,652  GFLOPs 512: 6.17  256: 1.54

@@ -1,0 +1,2 @@
+model,n_bands,params,GFLOPs_512,GFLOPs_256
+tinyunet4_4b_s0,4,122144,1.5854,0.3964
