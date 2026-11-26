@@ -1,0 +1,4 @@
+model,n_bands,experiment,BOA_median,BOA_median_all,PA_low,PA_middle,PA_high,UA_low,UA_middle,UA_high,IoU,n_patches,n_patches_with_positive
+tinyunet4_4b_s1,4,a_cloud,0.8936,0.9186,2.3166,42.5997,55.0837,0.3861,27.1557,72.4582,0.7947,975,777
+tinyunet4_4b_s1,4,b_shadow,0.8228,0.8816,15.8284,73.9645,10.2071,7.8402,65.3846,26.7751,0.4759,975,676
+tinyunet4_4b_s1,4,c_invalid,0.8756,0.9074,2.1879,42.9858,54.8263,0.6435,22.7799,76.5766,0.8205,975,777
